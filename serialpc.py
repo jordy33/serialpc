@@ -40,7 +40,8 @@ if __name__ == "__main__":
         exit(1)
 
     try:
-
+        message_bytes = bytes.fromhex("7E9C0000000167347E")
+        ser1.write(message_bytes)
         while True:
 
             size = ser1.inWaiting()
